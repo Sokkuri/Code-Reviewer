@@ -1,0 +1,4 @@
+include: "/.gitlab/ci/linter.gitlab-ci.yml"
+
+stages:
+    - lint
