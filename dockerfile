@@ -49,4 +49,6 @@ ENV FILTER_REGEX_INCLUDE=.*\.(cs|css|scss|ts|js|yml|ps1|vue) \
 COPY ./run.sh /reviewer/run.sh
 COPY ./.editorconfig /reviewer/.editorconfig
 
+RUN ["chmod", "+x","/reviewer/run.sh"]
+
 ENTRYPOINT ["/reviewer/run.sh"]
