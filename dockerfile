@@ -1,9 +1,9 @@
 FROM github/super-linter:latest
 
-ENV FILTER_REGEX_INCLUDE=.*\.(cs|css|scss|ts|js|yml|ps1|vue) \
+ENV RUN_LOCAL=true \
     VALIDATE_ALL_CODEBASE=false \
-    # Bypass GitHub checks
-    RUN_LOCAL=true \
+    FILTER_REGEX_INCLUDE=.*\.(cs|scss|ts|yml|ps1|vue) \
+    FILTER_REGEX_EXCLUDE=.*(dist)[^.].* \
     # Disabled Linters
     VALIDATE_ARM=false \
     VALIDATE_BASH=false \
@@ -44,10 +44,15 @@ ENV FILTER_REGEX_INCLUDE=.*\.(cs|css|scss|ts|js|yml|ps1|vue) \
     VALIDATE_TERRAFORM_TERRASCAN=false \
     VALIDATE_TSX=false \
     VALIDATE_XML=false \
-    VALIDATE_JSON=false
+    VALIDATE_JSON=false \
+    VALIDATE_JAVASCRIPT_STANDARD=false \
+    VALIDATE_TYPESCRIPT_STANDARD=false \
+    VALIDATE_CSS=false
 
 COPY ./run.sh /reviewer/run.sh
 COPY ./.editorconfig /reviewer/.editorconfig
+COPY ./.ecrc /reviewer/.ecrc
+COPY ./rules /.github/linters
 
 RUN ["chmod", "+x","/reviewer/run.sh"]
 
