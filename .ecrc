@@ -1,4 +1,7 @@
 {
+    "exclude": [
+        "\\.gitlab-ci\\.yml$"
+    ],
     "disable": {
         "indentSize": true
     }
