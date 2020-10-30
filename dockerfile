@@ -1,9 +1,8 @@
 FROM github/super-linter:latest
 
 ENV RUN_LOCAL=true \
-    VALIDATE_ALL_CODEBASE=false \
     FILTER_REGEX_INCLUDE=\.(cs|scss|ts|yml|ps1|vue)+$ \
-    FILTER_REGEX_EXCLUDE=.*(dist|bin|obj|Migrations)\/.* \
+    FILTER_REGEX_EXCLUDE=.*(dist|bin|obj|Migrations|\.vscode)\/.* \
     # Disabled Linters
     VALIDATE_ARM=false \
     VALIDATE_BASH=false \
