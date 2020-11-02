@@ -3,6 +3,12 @@
 echo "Starting review ..."
 echo "Workspace:" ${WORKSPACE}
 
+if [ -z "${WORKSPACE}" ]
+then
+    echo "Workspace variable is not set! Exiting ..."
+    exit 1
+fi
+
 node node_modules/editorconfig-checker/dist/index.js -config ./.ecrc ${WORKSPACE}
 editorconfig_status=$?
 echo "Exit:" $editorconfig_status
