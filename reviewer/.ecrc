@@ -2,6 +2,7 @@
     "exclude": [
         "LICENSE",
         "\\.gitlab-ci\\.yml$",
+        ".*.git\\/.*",
         ".*dist\\/.*",
         ".*.vscode\\/.*"
     ],
