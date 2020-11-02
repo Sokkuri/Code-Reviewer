@@ -1,11 +1,12 @@
-include: "/.gitlab/ci/linter.gitlab-ci.yml"
+include:
+    - "https://gitlab.com/sokkuri/CI/-/raw/master/.gitlab/ci/linter.gitlab-ci.yml"
 
 stages:
-    - build-image
-    - lint
+    - test
+    - publish
 
-build-image:
-    stage: build-image
+publish-image:
+    stage: publish
     image:
         name: gcr.io/kaniko-project/executor:debug
         entrypoint: [""]
@@ -14,3 +15,4 @@ build-image:
         - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
         - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile $CI_PROJECT_DIR/dockerfile --destination $CI_REGISTRY_IMAGE:latest
     retry: 2
+    when: manual
