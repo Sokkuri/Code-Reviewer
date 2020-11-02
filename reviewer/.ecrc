@@ -1,0 +1,11 @@
+{
+    "exclude": [
+        "LICENSE",
+        "\\.gitlab-ci\\.yml$",
+        ".*dist\\/.*",
+        ".*.vscode\\/.*"
+    ],
+    "disable": {
+        "indentSize": true
+    }
+}
