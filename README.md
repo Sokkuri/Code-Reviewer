@@ -9,3 +9,9 @@ In other environments, you could use this command: `docker run --rm -e WORKSPACE
 
 ## Build image locally
 To build this image locally there is the `buildDockerImage.ps1` script in the `build` folder.
+
+## Used Linters
+| Linter                                                                               |
+| ------------------------------------------------------------------------------------ |
+| [Editorconfig Checker](https://github.com/editorconfig-checker/editorconfig-checker) |
+| [Eslint](https://github.com/eslint/eslint)                                                        |
