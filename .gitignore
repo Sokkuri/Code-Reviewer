@@ -1,0 +1,8 @@
+# IDE
+.vs
+.idea
+/**/.vs
+/**/.idea
+
+# Node
+/**/node_modules
