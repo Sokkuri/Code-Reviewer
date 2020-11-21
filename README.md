@@ -1,4 +1,5 @@
 # Code Reviewer
+[![ci](https://gitlab.com/sokkuri/Code-Reviewer/badges/master/pipeline.svg?style=flat)](https://gitlab.com/sokkuri/Code-Reviewer/-/commits/master)
 
 A linter docker image with preconfigured rules and excludes.
 
@@ -14,4 +15,4 @@ To build this image locally there is the `buildDockerImage.ps1` script in the `b
 | Linter                                                                               |
 | ------------------------------------------------------------------------------------ |
 | [Editorconfig Checker](https://github.com/editorconfig-checker/editorconfig-checker) |
-| [Eslint](https://github.com/eslint/eslint)                                                        |
+| [Eslint](https://github.com/eslint/eslint)                                           |
