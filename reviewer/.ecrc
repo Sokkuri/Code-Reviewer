@@ -4,7 +4,8 @@
         "\\.gitlab-ci\\.yml$",
         ".*.git\\/.*",
         ".*dist\\/.*",
-        ".*.vscode\\/.*"
+        ".*.vscode\\/.*",
+        ".*node_modules\\/.*"
     ],
     "disable": {
         "indentSize": true
