@@ -1,7 +1,7 @@
 # Code Reviewer
 [![ci](https://gitlab.com/sokkuri/Code-Reviewer/badges/master/pipeline.svg?style=flat)](https://gitlab.com/sokkuri/Code-Reviewer/-/commits/master)
 
-A linter docker image with preconfigured rules and excludes.
+Linter docker image
 
 ## How to use
 To use this as a step in **GitLab CI**, you can use this image like in [this configuration](https://gitlab.com/sokkuri/CI/-/blob/master/.gitlab/ci/linter.gitlab-ci.yml).
