@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: docker/login-action@v1.8.0
+        with:
+          username: ${{ secrets.DOCKERHUB_REGISTRY_USER }}
+          password: ${{ secrets.DOCKERHUB_REGISTRY_TOKEN }}
+      - run : |
+          docker build -t sokkuri/code-reviewer:latest .
+          docker push sokkuri/code-reviewer:latest
