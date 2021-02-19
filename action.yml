@@ -1,5 +1,13 @@
 name: Code-Reviewer
 description: "Linter docker image"
+
+inputs:
+  workspace:
+    description: "Path to project"
+    required: false
+    default: ${{ GITHUB_WORKSPACE }}
 runs:
   using: docker
   image: docker://sokkuri/code-reviewer
+  env:
+    WORKSPACE: ${{ inputs.workspace }}
