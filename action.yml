@@ -1,4 +1,4 @@
-name: Code-Reviewer
+name: "Sokkuri Code Reviewer"
 description: "Linter docker image"
 
 inputs:
@@ -8,6 +8,6 @@ inputs:
     default: ${{ GITHUB_WORKSPACE }}
 runs:
   using: docker
-  image: docker://sokkuri/code-reviewer
+  image: dockerfile
   env:
     WORKSPACE: ${{ inputs.workspace }}
