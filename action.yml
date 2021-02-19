@@ -1,0 +1,5 @@
+name: Code-Reviewer
+description: "Linter docker image"
+runs:
+  using: docker
+  image: docker://sokkuri/code-reviewer
