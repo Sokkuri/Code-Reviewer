@@ -1,6 +1,8 @@
 name: "Sokkuri Code Reviewer"
 description: "Linter docker image"
-
+branding:
+  icon: check-circle
+  color: blue
 inputs:
   workspace:
     description: "Path to project"
