@@ -1,4 +1,4 @@
-$dockerImageName = "registry.gitlab.com/sokkuri/code-reviewer:latest";
+$dockerImageName = "sokkuri/code-reviewer";
 
 Set-Location (Join-Path $PSScriptRoot "../" -Resolve);
 
