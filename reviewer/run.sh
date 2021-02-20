@@ -10,7 +10,7 @@ echo "Starting review ..."
 echo "Workspace:" ${WORKSPACE}
 
 # EditorConfig
-node node_modules/editorconfig-checker/dist/index.js -config ./.ecrc ${WORKSPACE}
+node /node_modules/editorconfig-checker/dist/index.js -config /.ecrc ${WORKSPACE}
 editorconfig_status=$?
 echo "Exit:" $editorconfig_status
 
@@ -20,7 +20,7 @@ then
     (cd ${WORKSPACE}; npm install --silent)
 fi
 
-node node_modules/eslint/bin/eslint.js --ext .ts, .vue --no-eslintrc --no-error-on-unmatched-pattern -c ${WORKSPACE}/.eslintrc.* ${WORKSPACE}
+node /node_modules/eslint/bin/eslint.js --ext .ts, .vue --no-eslintrc --no-error-on-unmatched-pattern -c ${WORKSPACE}/.eslintrc.* ${WORKSPACE}
 eslint_status=$?
 echo "Exit:" $eslint_status
 
