@@ -1,4 +1,4 @@
-$dockerImageName = "sokkuri/code-reviewer";
+$dockerImageName = "sokkuri/code-reviewer:latest";
 
 Set-Location (Join-Path $PSScriptRoot "../" -Resolve);
 
