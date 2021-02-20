@@ -10,6 +10,6 @@ inputs:
     default: ${{ github.workspace }}
 runs:
   using: docker
-  image: dockerfile
+  image: docker://sokkuri/code-reviewer:latest
   env:
     WORKSPACE: ${{ inputs.workspace }}
