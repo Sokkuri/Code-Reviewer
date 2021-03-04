@@ -4,6 +4,16 @@
 Linter docker image
 
 ## How to use
+### Github Action
+```yml
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@vx.x.x
+      - uses: sokkuri/code-reviewer@vx.x.x
+```
+
 ### GitLab CI
 To use this as a step in **GitLab CI**, you can use this image like in [this configuration](https://gitlab.com/sokkuri/CI/-/blob/master/.gitlab/ci/linter.gitlab-ci.yml).
 
