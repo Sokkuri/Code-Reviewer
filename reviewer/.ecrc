@@ -3,6 +3,7 @@
         "LICENSE",
         "\\.gitlab-ci\\.yml$",
         ".*.git\\/.*",
+        ".*.md\\/.*",
         ".*dist\\/.*",
         ".*.vscode\\/.*",
         ".*node_modules\\/.*"
