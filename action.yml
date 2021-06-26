@@ -1,15 +1,21 @@
-name: "Sokkuri Code Reviewer"
-description: "Linter docker image"
+name: Sokkuri Code Reviewer
+description: Linter for JavaScript projects
 branding:
   icon: check-circle
   color: blue
-inputs:
-  workspace:
-    description: "Path to project"
-    required: false
-    default: ${{ github.workspace }}
 runs:
-  using: docker
-  image: docker://sokkuri/code-reviewer:latest
-  env:
-    WORKSPACE: ${{ inputs.workspace }}
+  using: composite
+  steps:
+    - name: Prepare cache
+      uses: actions/cache@v2
+      with:
+        path: node_modules/
+        key: ${{ hashFiles('package-lock.json') }}
+    - name: Prepare modules
+      shell: bash
+      run: |
+        npm install --silent
+        npm install --silent -g eslint-cli
+    - name: ESLint
+      shell: bash
+      run: eslint --ext .ts, --ext .vue ./

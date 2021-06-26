@@ -1,7 +1,0 @@
-{
-    "name": "code-reviewer",
-    "dependencies": {
-        "eslint": "^7.20.0",
-        "editorconfig-checker": "^3.3.0"
-    }
-}
