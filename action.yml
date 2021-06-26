@@ -6,11 +6,6 @@ branding:
 runs:
   using: composite
   steps:
-    - name: Prepare cache
-      uses: actions/cache@v2
-      with:
-        path: node_modules/
-        key: ${{ hashFiles('package-lock.json') }}
     - name: Prepare modules
       shell: bash
       run: |
