@@ -6,10 +6,19 @@ branding:
 runs:
   using: composite
   steps:
+    - name: Log debug info
+      shell: bash
+      run: |
+        echo NPM:
+        npm -v
+        echo Node:
+        node -v
     - name: Prepare modules
       shell: bash
       run: |
-        npm install --silent
+        sudo chown -R $USER /usr/local/lib/node_modules
+        sudo chown -R $USER /usr/local/bin
+        npm ci
         npm install --silent -g eslint-cli
     - name: ESLint
       shell: bash
